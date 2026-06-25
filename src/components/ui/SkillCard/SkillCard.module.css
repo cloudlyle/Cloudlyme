@@ -1,0 +1,41 @@
+.card {
+  border-radius: var(--radius-card) !important;
+  background: rgba(253, 232, 238, 0.55) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  box-shadow: var(--shadow-card) !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover) !important;
+}
+
+.icon {
+  font-size: 34px;
+  margin-bottom: 18px;
+  line-height: 1;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 26px;
+  margin: 0 0 12px;
+  color: var(--color-text);
+}
+
+.body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none !important; }
+  .card:hover { transform: none; }
+}
