@@ -1,14 +1,17 @@
+import { Layout, Typography } from 'antd'
 import type { FC } from 'react'
 import styles from './Footer.module.css'
 
+const { Text } = Typography
+
 const Footer: FC = () => (
-  <footer className={styles.footer} role="contentinfo">
+  <Layout.Footer className={styles.footer} role="contentinfo">
     <div className={styles.watermark} aria-hidden="true">Cloudlyme</div>
     <div className={styles.inner}>
       <div className={styles.divider} role="separator" />
-      <p className={styles.copy}>© 2026 Cloudlyme — Made with 🌸</p>
+      <Text className={styles.copy}>© 2026 Cloudlyme — Made with 🌸</Text>
     </div>
-  </footer>
+  </Layout.Footer>
 )
 
 export default Footer

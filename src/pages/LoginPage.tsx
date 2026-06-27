@@ -1,22 +1,39 @@
+import { Layout, Card, Typography, Space } from 'antd'
 import { Link } from 'react-router-dom'
 import { LoginForm } from '@features/auth'
 
+const { Content } = Layout
+const { Title, Text } = Typography
+
 export function LoginPage() {
   return (
-    <div className="flex flex-col items-center justify-center grow gap-8 px-4 py-16">
-      <div className="flex flex-col items-center gap-2 text-center">
-        <h1 className="text-3xl font-medium text-[var(--text-h)] m-0">Sign in</h1>
-        <p className="text-[var(--text)]">Enter your credentials to continue.</p>
-      </div>
+    <Layout style={{ minHeight: '100vh', background: '#FFF8FA' }}>
+      <Content style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '64px 16px' }}>
+        <Space direction="vertical" size={24} style={{ width: '100%', maxWidth: 400, alignItems: 'center' }}>
 
-      <LoginForm />
+          <div style={{ textAlign: 'center' }}>
+            <Title
+              level={2}
+              style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic', margin: 0, color: '#3D1A22' }}
+            >
+              Sign in
+            </Title>
+            <Text type="secondary">Enter your credentials to continue.</Text>
+          </div>
 
-      <p className="text-sm text-[var(--text)]">
-        Back to{' '}
-        <Link to="/" className="text-[var(--accent)] underline">
-          home
-        </Link>
-      </p>
-    </div>
+          <Card
+            style={{ width: '100%', borderRadius: 20, boxShadow: '0 4px 20px rgba(242,167,181,0.15)', border: '1px solid rgba(242,167,181,0.3)' }}
+            styles={{ body: { padding: '28px 32px' } }}
+          >
+            <LoginForm />
+          </Card>
+
+          <Text type="secondary" style={{ fontSize: 14 }}>
+            Back to <Link to="/">home</Link>
+          </Text>
+
+        </Space>
+      </Content>
+    </Layout>
   )
 }

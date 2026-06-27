@@ -1,3 +1,4 @@
+import { Layout } from 'antd'
 import type { FC } from 'react'
 import Navbar from '../components/layout/Navbar/Navbar'
 import Footer from '../components/layout/Footer/Footer'
@@ -8,17 +9,19 @@ import ProjectsSection from '../components/sections/ProjectsSection/ProjectsSect
 import ContactSection from '../components/sections/ContactSection/ContactSection'
 
 const HomePage: FC = () => (
-  <>
+  <Layout style={{ background: 'transparent' }}>
     <Navbar />
-    <main>
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ContactSection />
-    </main>
+    <Layout.Content>
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ContactSection />
+      </main>
+    </Layout.Content>
     <Footer />
-  </>
+  </Layout>
 )
 
 export default HomePage

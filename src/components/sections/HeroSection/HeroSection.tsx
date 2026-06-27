@@ -1,7 +1,9 @@
-import { Avatar, Button } from 'antd'
+import { Avatar, Button, Typography, Space } from 'antd'
 import type { FC } from 'react'
 import CloudAnimation from '../../ui/CloudAnimation/CloudAnimation'
 import styles from './HeroSection.module.css'
+
+const { Title, Text, Paragraph } = Typography
 
 const HeroSection: FC = () => (
   <section id="top" className={styles.section} aria-labelledby="hero-name">
@@ -11,35 +13,23 @@ const HeroSection: FC = () => (
 
       {/* Left: copy */}
       <div className={styles.copy}>
-        <span className={styles.eyebrow}>Personal Studio · Est. 2026</span>
+        <Text className={styles.eyebrow}>Personal Studio · Est. 2026</Text>
 
-        <h1 id="hero-name" className={styles.name}>
+        <Title level={1} id="hero-name" className={styles.name}>
           Cloudly<em>me</em>
-        </h1>
+        </Title>
 
-        <p className={styles.tagline}>Dreamer. Builder. Creator.</p>
+        <Paragraph className={styles.tagline}>Dreamer. Builder. Creator.</Paragraph>
 
-        <p className={styles.desc}>
+        <Paragraph className={styles.desc}>
           A quiet corner of the internet where soft ideas grow into thoughtful things —
           design, code, and the small details in between.
-        </p>
+        </Paragraph>
 
-        <div className={styles.actions}>
-          <Button
-            href="#work"
-            size="large"
-            className={styles.btnPrimary}
-          >
-            View my work
-          </Button>
-          <Button
-            href="#about"
-            size="large"
-            className={styles.btnGhost}
-          >
-            More about me
-          </Button>
-        </div>
+        <Space size={16} wrap className={styles.actions}>
+          <Button href="#work"  size="large" className={styles.btnPrimary}>View my work</Button>
+          <Button href="#about" size="large" className={styles.btnGhost}>More about me</Button>
+        </Space>
       </div>
 
       {/* Right: avatar */}

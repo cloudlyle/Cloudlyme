@@ -1,4 +1,4 @@
-import { Space, Button, Form, Input } from 'antd'
+import { Space, Button, Form, Input, Typography } from 'antd'
 import {
   GithubOutlined,
   InstagramOutlined,
@@ -9,6 +9,8 @@ import { useState } from 'react'
 import type { FC } from 'react'
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation'
 import styles from './ContactSection.module.css'
+
+const { Title, Text, Paragraph } = Typography
 
 const ContactSection: FC = () => {
   const { ref, isVisible } = useScrollAnimation()
@@ -24,24 +26,26 @@ const ContactSection: FC = () => {
       <div className={styles.watermark} aria-hidden="true">cloudlyme</div>
 
       <div className={styles.inner}>
-        <span className={styles.eyebrow}>Say hello</span>
+        <Text className={styles.eyebrow}>Say hello</Text>
 
-        <h2 id="contact-heading" className={styles.heading}>
+        <Title level={2} id="contact-heading" className={styles.heading}>
           Let's make something <em>lovely</em>.
-        </h2>
+        </Title>
 
-        <p className={styles.sub}>
+        <Paragraph className={styles.sub}>
           Have a project, a question, or just want to say hi? My inbox is always open.
-        </p>
+        </Paragraph>
 
         <Form
           layout="vertical"
           onFinish={() => setSent(true)}
           className={styles.form}
           aria-label="Contact form"
+          requiredMark={false}
         >
           <Form.Item
             name="name"
+            label="Name"
             rules={[{ required: true, message: 'Please enter your name' }]}
           >
             <Input placeholder="Your name" className={styles.input} aria-label="Your name" />
@@ -49,6 +53,7 @@ const ContactSection: FC = () => {
 
           <Form.Item
             name="email"
+            label="Email"
             rules={[{ required: true, type: 'email', message: 'Please enter a valid email' }]}
           >
             <Input placeholder="Your email" className={styles.input} aria-label="Your email" />
@@ -56,6 +61,7 @@ const ContactSection: FC = () => {
 
           <Form.Item
             name="message"
+            label="Message"
             rules={[{ required: true, message: 'Please enter a message' }]}
           >
             <Input.TextArea
