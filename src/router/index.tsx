@@ -18,5 +18,5 @@ export const router = createBrowserRouter(
       element: <NotFoundPage />,
     },
   ],
-  { basename: '/Cloudlyme/' },
+  { basename: import.meta.env.BASE_URL },
 )

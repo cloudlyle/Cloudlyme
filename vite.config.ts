@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 export default defineConfig({
-  base: '/Cloudlyme/',
+  base: process.env.VERCEL ? '/' : '/Cloudlyme/',
   plugins: [tailwindcss(), react()],
   resolve: {
     alias: {
