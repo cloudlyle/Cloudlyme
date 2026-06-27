@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cloudlyme — Personal Studio</title>
+  <script>
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
 
   <!-- SEO -->
   <meta name="description" content="Cloudlyme — A quiet corner of the internet where soft ideas grow into thoughtful things. Design, code, and the small details in between." />
