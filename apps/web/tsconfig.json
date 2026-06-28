@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*":     ["src/components/*"],
+      "@features/*":       ["src/features/*"],
+      "@hooks/*":          ["src/hooks/*"],
+      "@utils/*":          ["src/utils/*"],
+      "@store/*":          ["src/store/*"],
+      "@types/*":          ["src/types/*"],
+      "@assets/*":         ["src/assets/*"],
+      "@api/*":            ["src/api/*"],
+      "@cloudlyme/ui":     ["../../packages/ui/src"],
+      "@cloudlyme/tokens": ["../../packages/tokens/src"],
+      "@cloudlyme/types":  ["../../packages/types/src"],
+      "@cloudlyme/hooks":  ["../../packages/hooks/src"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

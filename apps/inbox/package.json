@@ -1,0 +1,28 @@
+{
+  "name": "inbox",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev":        "vite",
+    "build":      "tsc && vite build",
+    "preview":    "vite preview",
+    "lint":       "eslint .",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react":     "^19.2.6",
+    "react-dom": "^19.2.6",
+    "@cloudlyme/ui":     "workspace:*",
+    "@cloudlyme/tokens": "workspace:*",
+    "@cloudlyme/types":  "workspace:*",
+    "@cloudlyme/hooks":  "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react":         "^19.2.14",
+    "@types/react-dom":     "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "typescript":           "^6.0.3",
+    "vite":                 "^8.0.12"
+  }
+}

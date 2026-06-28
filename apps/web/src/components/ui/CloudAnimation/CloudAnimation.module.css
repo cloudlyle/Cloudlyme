@@ -1,0 +1,25 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  left: 0;
+  color: #F2A7B5;
+  filter: blur(2px);
+  animation: cloudDrift linear infinite;
+  will-change: transform;
+}
+
+@keyframes cloudDrift {
+  from { transform: translateX(-20vw); }
+  to   { transform: translateX(120vw); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layer { display: none; }
+}

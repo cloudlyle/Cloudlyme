@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@cloudlyme/ui":     ["../../packages/ui/src"],
+      "@cloudlyme/tokens": ["../../packages/tokens/src"],
+      "@cloudlyme/types":  ["../../packages/types/src"],
+      "@cloudlyme/hooks":  ["../../packages/hooks/src"]
+    }
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "homepage": "https://cloudlyle.github.io/Cloudlyme",
+  "scripts": {
+    "dev":        "vite",
+    "build":      "tsc && vite build",
+    "preview":    "vite preview",
+    "predeploy":  "npm run build",
+    "deploy":     "gh-pages -d dist",
+    "lint":       "eslint .",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ant-design/icons":    "^6.2.5",
+    "@tanstack/react-query": "^5.101.1",
+    "antd":                 "^6.4.5",
+    "axios":                "^1.18.1",
+    "react":                "^19.2.6",
+    "react-dom":            "^19.2.6",
+    "react-router-dom":     "6",
+    "zustand":              "^5.0.14",
+    "@cloudlyme/ui":        "workspace:*",
+    "@cloudlyme/tokens":    "workspace:*",
+    "@cloudlyme/types":     "workspace:*",
+    "@cloudlyme/hooks":     "workspace:*"
+  },
+  "devDependencies": {
+    "@eslint/js":               "^10.0.1",
+    "@tailwindcss/vite":        "^4.3.1",
+    "@types/node":              "^26.0.1",
+    "@types/react":             "^19.2.14",
+    "@types/react-dom":         "^19.2.3",
+    "@vitejs/plugin-react":     "^6.0.1",
+    "eslint":                   "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "gh-pages":                 "^6.3.0",
+    "globals":                  "^17.6.0",
+    "tailwindcss":              "^4.3.1",
+    "typescript":               "^6.0.3",
+    "typescript-eslint":        "^8.62.0",
+    "vite":                     "^8.0.12"
+  }
+}
