@@ -90,7 +90,8 @@ apps/web/.env.production   # picked up automatically on production build
 ---
 
 ## 5. Deploy apps/web (portfolio)
-
+Vercel: https://cloudlyme.vercel.app/
+Github: https://cloudlyle.github.io/Cloudlyme/
 ### Option A — Vercel (primary, automatic)
 
 The root `vercel.json` is already configured:
